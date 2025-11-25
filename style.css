@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+
+/* Maquetacion */
+
+body {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "contenido"
+    "footer"
+    ;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: contenido;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+/* Header ------------------------------------------------*/
+
+.header {
+    height: 6vh;
+    position: relative;
+
+}
+
+.header div {
+    width: 100%;
+    margin: auto;
+    padding: 8px 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+
+    background-color: #434343;
+    color: wheat;
+    border-bottom: 2px solid wheat;
+
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.menu ul .active {
+    color: white;
+}
+
+.menu ul a {
+    text-decoration: none;
+    color: wheat;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.menu ul a:hover {
+    color: white;
+    transition: .5s ease;
+}
+
+main {
+    width: 80%;
+    min-height: 90vh;
+    padding: 20px 50px 50px;
+    margin: auto;
+
+    background: linear-gradient(white, wheat);
+}
+
+.bxslider img {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+}
+
+
+/* Main --------------------------------------------------*/
+
+
+section .title-h3 {
+    height: 130px;
+    color: #434343;
+
+    text-align: center;
+    animation: moverH3 2s infinite alternate;
+}
+
+@keyframes moverH3 {
+    0% {
+        font-size: 27px;
+    }
+
+    100% {
+        font-size: 30px;
+    }
+}
+
+
+/* Section Contenet ----------------------------------*/
+.columns {
+    column-count: 3;
+    column-gap: 20px;
+}
+
+.content .card {
+    min-height: 450px;
+    padding: 10px;
+
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content .card h3 {
+    padding: 10px;
+    background-color: #434343;
+    color: wheat;
+    text-align: center;
+}
+
+.content .card img {
+    width: 100%;
+    height: 300px;
+}
+
+.content .formulario input {
+    padding: 10px;
+}
+
+.content .formulario button {
+    width: 200px;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #434343;
+    border: 2px solid #434343;
+    border-radius: 5px;
+    color: wheat;
+    transition: .5s ease;
+}
+
+.content .formulario button:hover {
+    background-color: wheat;
+    color: #434343;
+    transition: .5s ease;
+}
+
+/* Footer --------------------------------------------- */
+
+.footer {
+    width: 100%;
+    padding: 10px;
+    min-height: 50px;
+    background-color: #434343;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer p {
+    color: white;
+}
